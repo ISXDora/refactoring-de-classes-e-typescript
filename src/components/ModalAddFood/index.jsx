@@ -23,7 +23,7 @@ class ModalAddFood extends Component {
     const { isOpen, setIsOpen } = this.props;
 
     return (
-      <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
+      <Modal isOpenModal={isOpen} onHandleOpenModal={setIsOpen}>
         <Form ref={this.formRef} onSubmit={this.handleSubmit}>
           <h1>Novo Prato</h1>
           <Input name="image" placeholder="Cole o link aqui" />
