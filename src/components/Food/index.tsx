@@ -4,7 +4,7 @@ import { FiEdit3, FiTrash } from 'react-icons/fi';
 import { Container } from './styles';
 import api from '../../services/api';
 
-interface FoodProps {
+interface FoodObjectProps {
   image: string,
   name: string;
   description: string;
@@ -13,8 +13,8 @@ interface FoodProps {
 }
 
 interface FoodProps {
-  food: FoodProps,
-  handleEditFood: (data:FoodProps) => void
+  food: FoodObjectProps,
+  handleEditFood: (data:FoodObjectProps) => void
   handleDelete: (id: string) => void
 }
 
@@ -39,7 +39,7 @@ interface FoodProps {
     return (
       <Container available={isAvailable}>
         <header>
-          <img src={food.image} alt={food.name} />
+          <img src={food.image} alt={food.name}/>
         </header>
         <section className="body">
           <h2>{food.name}</h2>
